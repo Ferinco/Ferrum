@@ -1,9 +1,6 @@
-<script>
-export default {
-    name: "Home"
-};
-</script>
-
 <template>
-home
+<Landing/>
 </template>
+<script setup>
+import Landing from '../components/Landing/landing.vue';
+</script>
