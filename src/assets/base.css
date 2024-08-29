@@ -56,5 +56,13 @@
 
 
 body {
+/* background-color: #f7f0f0; */
+font-family: "Poppins", sans-serif;
+max-width: 100vw !important;
+overflow-x: hidden;
 
+}
+.hollow-text{
+  /* -webkit-text-stroke: 1px #109648 !important; */
+  color: transparent !important;
 }

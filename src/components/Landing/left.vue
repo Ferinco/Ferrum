@@ -1,5 +1,5 @@
 <template>
-    <div class="w-1/2 h-full bg-teal-400">
+    <div class="w-full md:w-1/2 h-full bg-[#18A999]">
     
     </div>
     </template>

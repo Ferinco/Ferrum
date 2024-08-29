@@ -1,5 +1,5 @@
 <template>
-<div class="flex flex-row h-screen">
+<div class="flex flex-col md:flex-row h-screen">
     <Right/>
     <Left/>
 </div>
@@ -12,7 +12,8 @@ export default {
     name: "Landing",
     components: {
     Right,
-    Left
+    Left,
+    
   }
 };
 </script>

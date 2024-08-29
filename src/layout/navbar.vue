@@ -1,6 +1,6 @@
 <template>
-    <nav class="fixed flex gap-8 py-4 px-9 mt-8 border border-teal-700 rounded-full bg-white">
-        <div class="border w-10 text-sm">logo</div>
+    <nav class="fixed hidden md:flex gap-8 py-5 px-9 mt-5 border border-black/35 rounded-full bg-[#f7f0f0]">
+        <div class="border w-10 text-sm"></div>
         <RouterLink v-for="link in navlinks" class="font-medium text-sm" :to="link.url">{{ link.name }}</RouterLink>
     </nav>
 </template>
@@ -11,13 +11,14 @@ export default {
     name: "Navbar",
     setup() {
         const navlinks = ref([
-            { id: 0, name: "Home", url: "/" },
-            { id: 1, name: "Why Ferrum", url: "/about" },
-            { id: 2, name: "About us", url: "/about" },
-            { id: 2, name: "Contact", url: "/about" },
-            { id: 2, name: "Clients", url: "/about" },
-            { id: 2, name: "Clients", url: "/about" },
+            { id: 0, name: "Why Ferrum?", url: "/" },
+            { id: 1, name: "Our Servies", url: "/about" },
+            { id: 2, name: "Work", url: "/about" },
+            { id: 3, name: "Clients", url: "/about" },
+            { id: 4, name: "Contact", url: "/about" },
+            // { id: 2, name: "Contact Us", url: "/about" },
         ]);
+        
         return {
             navlinks,
         };
