@@ -36,7 +36,7 @@
 import { ref } from 'vue';
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
-import Button from './custom/button.vue';
+import Button from './custom/Button.vue';
 gsap.registerPlugin(ScrollTrigger)
 
 export default {

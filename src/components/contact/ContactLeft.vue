@@ -12,7 +12,7 @@
 
 <script>
 import { ref } from 'vue';
-import Button from '../custom/button.vue';
+import Button from '../custom/Button.vue';
 export default {
     name: "ContactLeft",
     components: {
