@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "gsap": "^3.12.5",
+    "primevue": "^4.0.5",
+    "swiper": "^11.1.11",
     "vue": "^3.4.29",
     "vue-router": "^4.4.3"
   },

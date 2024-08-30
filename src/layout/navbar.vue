@@ -1,5 +1,5 @@
 <template>
-    <nav class="fixed hidden md:flex gap-8 py-5 px-9 mt-5 border border-black/35 rounded-full bg-[#f7f0f0]">
+    <nav class="fixed hidden md:flex gap-8 py-5 px-9 mt-5 border border-black/35 rounded-full bg-white z-50">
         <div class="border w-10 text-sm"></div>
         <RouterLink v-for="link in navlinks" class="font-medium text-sm" :to="link.url">{{ link.name }}</RouterLink>
     </nav>

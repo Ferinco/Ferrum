@@ -5,5 +5,5 @@
     </script>
 
 <template>
-    <button class="text-white font-semibold rounded-lg bg-gradient-to-r w-fit  from-emerald-700 to-cyan-500 px-5 py-3">{{ title || "no props yet" }}</button>
+    <button class="text-white font-semibold rounded-lg bg-gradient-to-r w-fit  from-green-700 to-green-900 px-5 py-3">{{ title || "no props yet" }}</button>
 </template>
