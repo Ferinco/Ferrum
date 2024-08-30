@@ -6,7 +6,8 @@
         <p class="text-xl my-2">We provide vast services of custom development.</p>
         <div class="grid grid-cols-2 gap-5 mt-10">
             <div v-for="serviceCard in serviceCards" :key="serviceCard.id" class="service-card">
-                <div class="w-12 h-12 my-2 icon-div flex justify-center items-center" :class="getClassName(serviceCard.id)">
+                <div class="w-12 h-12 my-2 icon-div flex justify-center items-center"
+                    :class="getClassName(serviceCard.id)">
                     <iconify-icon :icon="serviceCard.icon" noobserver class="text-white text-[2em]"></iconify-icon>
                 </div>
                 <h6 class="font-bold text-lg my-2">
@@ -22,12 +23,8 @@
 </template>
 <script>
 import { ref } from 'vue';
-import { Icon } from '@iconify/vue';
 export default {
     name: "ServiceLeft",
-    components: {
-        Icon
-    },
     setup() {
         const serviceCards = ref([
             {
@@ -78,7 +75,8 @@ export default {
 .icon-div {
     box-shadow: rgba(0, 0, 0, 0.9) 5px 5px
 }
-.icon{
+
+.icon {
     color: black !important;
 }
 </style>

@@ -28,14 +28,9 @@
 </template>
 
 <script>
-import { Icon } from '@iconify/vue';
 import { onMounted, ref } from 'vue';
-
 export default {
     name: "ServiceRight",
-    components: {
-        Icon
-    },
     setup() {
         const swiperEl = ref(null);
 
