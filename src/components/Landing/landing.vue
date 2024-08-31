@@ -1,5 +1,5 @@
 <template>
-<div class="flex flex-col md:flex-row h-screen">
+<div class="flex flex-col md:flex-row h-fit">
     <Right/>
     <Left/>
 </div>

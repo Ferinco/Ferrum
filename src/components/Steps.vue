@@ -1,27 +1,29 @@
 <template>
-    <div class="w-full relative bg-gradient-to-r from-white from-50% to-yellow-500 to-50%">
-        <div class="px-20 h-full flex flex-col w-screen overflow-x-hidden gap-8" ref="section">
+    <div class="w-full relative md:bg-gradient-to-r from-white from-50% to-yellow-500 to-50%">
+        <div class="px-8 sm:px-20 h-full flex flex-col w-screen overflow-x-hidden gap-8" ref="section">
             <div class="my-32 h-full flex flex-col gap-10">
                 <h2 class="text-5xl font-bold max-w-[350px]">
                     How we do what we do.
                 </h2>
-    
-                <div class="card-wrapper flex flex-row pl-64 gap-10 h-fit" ref="cardWrapper">
+
+                <div class="card-wrapper flex flex-row pl-10 md:pl-64 gap-10 h-fit" ref="cardWrapper">
                     <template v-for="(item, index) in items" :key="index">
-                        <div class="item-card flex flex-col gap-8 h-auto w-[350px] flex-shrink-0 bg-[#F7F0F0] text-black p-5 my-4 overflow-hidden"
+                        <div class="item-card rounded-xl flex flex-col md:gap-8 h-auto w-[320px] md:w-[350px] flex-shrink-0 bg-[#F7F0F0] text-black p-5 my-4 overflow-hidden"
                             ref="card">
                             <div class="flex flex-row justify-between">
-                                <h2 class="my-3 text-5xl w-1/2 break-words font-semibold">{{ item.title }}</h2>
+                                <h2 class="my-3 text-4xl w-1/2 break-words font-semibold"></h2>
                                 <div class="img-wrapper h-36 w-36 justify-end">
-                                    <iconify-icon :icon="item.image" noobserver class="text-[20em] -mt-28 -rotate-12" :class="getClassName(index)"></iconify-icon>
+                                    <iconify-icon :icon="item.image" noobserver class="text-[15rem] md:text-[20em] -mt-28 -rotate-12"
+                                        :class="getClassName(index)"></iconify-icon>
                                 </div>
                             </div>
-                            <div class="card-content p-4">
+                            <div class="card-content p-4 flex flex-col">
+                                <h2 class="my-3 text-3xl md:text-4xl break-words font-semibold">{{ item.title }}</h2>
                                 <p class="text-lg">{{ item.description }}</p>
                             </div>
                         </div>
                     </template>
-    
+
                 </div>
             </div>
             <!-- <div class="flex justify-center ml-52 h-fit mt-7">
@@ -76,7 +78,7 @@ export default {
                     description: 'We bring creative and cutting-edge ideas to transform your vision into a unique digital experience.'
                 },
                 {
-                    image: "mdi:bricks" ,
+                    image: "mdi:bricks",
                     title: 'Building',
                     description: 'Our developers turn concepts into reality, ensuring robust and scalable websites or applications.'
                 },
@@ -105,14 +107,11 @@ export default {
 <style>
 .item-card {
     box-shadow:
-        rgba(65, 169, 24, 0.4) 5px 5px,
-        rgba(24, 169, 153, 0.3) 10px 10px,
-        rgba(12, 97, 88, 0.2) 15px 15px,
-        rgba(8, 65, 59, 0.1) 20px 20px,
-        rgba(0, 0, 0, 0.05) 25px 25px;
+        rgba(0, 0, 0, 0.6) 5px 5px,
+        rgba(0, 0, 0, 0.5) 10px 10px
 }
 
 .hire {
-    box-shadow:rgba(0, 0, 0, 0.4) 5px 5px
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px
 }
 </style>

@@ -1,16 +1,16 @@
 <template>
-    <div class="w-full md:w-1/2 h-full bg-transparent px-12 sm:px-20 my-32">
+    <div class="w-full md:w-1/2 h-full bg-transparent px-7 sm:px-20 my-32">
         <h2 class="text-5xl font-bold">
-            With us, Development is Made Easy!
+            With us, Everything is Made Easy!
         </h2>
-        <p class="text-xl my-2">We provide vast services of custom development.</p>
-        <div class="grid grid-cols-2 gap-5 mt-10">
-            <div v-for="serviceCard in serviceCards" :key="serviceCard.id" class="service-card">
-                <div class="w-12 h-12 my-2 icon-div flex justify-center items-center"
+        <p class="text-xl my-4">We provide vast services of custom development.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+            <div v-for="serviceCard in serviceCards" :key="serviceCard.id" class="service-card my-2">
+                <div class="w-12 h-12 my-4 icon-div flex justify-center items-center border border-black"
                     :class="getClassName(serviceCard.id)">
                     <iconify-icon :icon="serviceCard.icon" noobserver class="text-white text-[2em]"></iconify-icon>
                 </div>
-                <h6 class="font-bold text-lg my-2">
+                <h6 class="font-bold text-xl mt-2">
                     {{ serviceCard.title }}
                 </h6>
                 <p class="text-md">

@@ -1,7 +1,7 @@
 <template>
-    <div class="w-full md:w-1/2 h-auto bg-[#18A999] flex flex-col px-12 sm:px-20 items-center justify-center gap-5 py-5">
+    <div class="w-full md:w-1/2 relative h-auto bg-[#18A999] flex flex-col px-8 sm:px-20 items-center justify-center gap-5 py-5">
         <div class="my-32 flex flex-col gap-3">
-            <div class="p-5 rounded-lg h-fit border w-fit flex items-center gap-5 cursor-pointer duration-100 hover:z-10 hover:rotate-0" v-for="social in socials" :class="getClassName(social.id)">
+            <div class="p-5 rounded-lg h-fit border w-fit flex items-center gap-5 cursor-pointer duration-100 hover:z-10 hover:rotate-0 z-30" v-for="social in socials" :class="getClassName(social.id)">
             <div class="h-9 border w-9"></div>
             <div class="text-white text-2xl">
                 <h3>{{ social.about }}</h3>
@@ -23,7 +23,7 @@ export default {
             {
                 id: 0,
                 icon: "fluent:laptop-20-filled",
-                about: "Send us an email"
+                about: "Reach out to us via Email"
             },
             {
                 id: 1,

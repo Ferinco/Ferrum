@@ -1,6 +1,8 @@
 <template>
-    <nav class="fixed hidden md:flex gap-8 py-5 px-9 mt-5 border border-black/35 rounded-full bg-white z-50">
-        <div class="border w-10 text-sm"></div>
+    <nav class="fixed hidden md:flex items-center gap-8 py-3 px-9 mt-5 border border-black/35 rounded-full bg-white z-50">
+        <div class="w-10 h-10 text-sm">
+            <img src="/public/favicon.png"/>
+        </div>
         <RouterLink v-for="link in navlinks" class="font-medium text-sm" :to="link.url">{{ link.name }}</RouterLink>
     </nav>
 </template>
@@ -11,7 +13,7 @@ export default {
     name: "Navbar",
     setup() {
         const navlinks = ref([
-            { id: 0, name: "Why Ferrum?", url: "/" },
+            { id: 0, name: "Why Octodos?", url: "/" },
             { id: 1, name: "Our Servies", url: "/about" },
             { id: 2, name: "Work", url: "/about" },
             { id: 3, name: "Clients", url: "/about" },
