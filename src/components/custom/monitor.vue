@@ -1,9 +1,13 @@
 <template>
     <div class="h-screen fixed w-screen flex justify-between">
         <div class="flex justify-center items-center gap-2 flex-col w-12 h-full">
-            <div v-for="(dot, index) in 4" :key="index" class="w-7 h-7 rounded-full" :class="getClassName(index)"></div>
+            <div v-for="(dot, index) in 4" :key="index" class="w-7 h-7 rounded-full border-2 border-black flex justify-center items-center">
+                <div class="w-[87%] h-[87%] mt-[1px] rounded-full" :class="getClassName(index)">
+
+                </div>
+            </div>
         </div>
-        <h1 id="scroll-size">0</h1>
+        <!-- <h1 id="scroll-size">0</h1> -->
         <div class="flex justify-center items-center gap-3 flex-col w-14 h-full bg-transparent -z-10">
         </div>
     </div>
@@ -48,8 +52,8 @@ export default {
 
         function getClassName(index) {
             return {
-                'bg-white': index === active.value,
-                'bg-black': index !== active.value,
+                'bg-transparent': index !== active.value,
+                'bg-black': index === active.value,
             };
         }
         console.log(active.value);
