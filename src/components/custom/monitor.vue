@@ -1,7 +1,7 @@
 <template>
     <div class="h-screen fixed w-screen flex justify-between">
         <div class="flex justify-center items-center gap-2 flex-col w-12 h-full">
-            <div v-for="(dot, index) in 4" :key="index" class="w-7 h-7 rounded-full border-2 border-black flex justify-center items-center">
+            <div v-for="(dot, index) in 4" :key="index" class="w-6 h-6 rounded-full border-2 border-black flex justify-center items-center">
                 <div class="w-[87%] h-[87%] mt-[1px] rounded-full" :class="getClassName(index)">
 
                 </div>
