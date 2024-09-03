@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-fit flex md:flex-row flex-col">
+    <div class="w-full h-fit flex md:flex-row flex-col" id="services">
         <ServiceLeft />
         <ServiceRight />
     </div>

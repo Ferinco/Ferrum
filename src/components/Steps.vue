@@ -8,7 +8,7 @@
 
                 <div class="card-wrapper flex flex-row pl-10 md:pl-64 gap-10 h-fit" ref="cardWrapper">
                     <template v-for="(item, index) in items" :key="index">
-                        <div class="item-card rounded-xl flex flex-col md:gap-8 h-auto w-[320px] md:w-[350px] flex-shrink-0 bg-[#F7F0F0] text-black p-5 my-4 overflow-hidden"
+                        <div class="item-card rounded-xl flex flex-col md:gap-8 h-auto w-[320px] md:w-[350px] flex-shrink-0 bg-[#ffff] text-black p-5 my-4 overflow-hidden"
                             ref="card">
                             <div class="flex flex-row justify-between">
                                 <h2 class="my-3 text-4xl w-1/2 break-words font-semibold"></h2>
@@ -106,9 +106,10 @@ export default {
 </script>
 <style>
 .item-card {
-    box-shadow:
+    /* box-shadow:
         rgba(0, 0, 0, 0.6) 5px 5px,
-        rgba(0, 0, 0, 0.5) 10px 10px
+        rgba(0, 0, 0, 0.5) 10px 10px */
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .hire {

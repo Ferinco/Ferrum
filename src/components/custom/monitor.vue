@@ -1,14 +1,11 @@
 <template>
-    <div class="h-screen fixed w-screen flex justify-between">
-        <div class="flex justify-center items-center gap-2 flex-col w-12 h-full">
+    <div class="h-screen fixed w-fit flex justify-start">
+        <div class="hidden md:flex justify-center items-center gap-2 flex-col w-12 h-full">
             <div v-for="(dot, index) in 4" :key="index" class="w-6 h-6 rounded-full border-2 border-black flex justify-center items-center">
-                <div class="w-[87%] h-[87%] mt-[1px] rounded-full" :class="getClassName(index)">
+                <div class="w-[83%] h-[83%] mt-[1px] rounded-full" :class="getClassName(index)">
 
                 </div>
             </div>
-        </div>
-        <!-- <h1 id="scroll-size">0</h1> -->
-        <div class="flex justify-center items-center gap-3 flex-col w-14 h-full bg-transparent -z-10">
         </div>
     </div>
 </template>

@@ -1,10 +1,10 @@
 <template>
     <div class="w-full md:w-1/2 h-auto bg-green-500 flex flex-col justify-center ">
-        <div class="my-14 md:my-32 px-8">
+        <div class="my-14 md:my-32 px-8 md:px-20">
             <swiper-container ref="swiperEl" slides-per-view="1" speed="500" loop="false" css-mode="true">
                 <swiper-slide v-for="(slide, index) in slides" :key="index" class="h-80">
                     <div
-                        class="h-72 max-w-[400px] bg-white slide-div flex flex-col justify-center items-start rounded-lg p-5 gap-6">
+                        class="h-72 max-w-[400px] bg-white slide-div flex flex-col justify-center items-center rounded-lg p-5 gap-6">
                         <p class="text-xl">
                             {{ slide.statement }}
                         </p>
@@ -18,7 +18,10 @@
                 </swiper-slide>
 
             </swiper-container>
-            <div class="flex justify-center md:justify-end mt-5 lg:pr-9">
+            <div class="flex justify-center mt-5 lg:pr-9">
+                <button @click="slideNext">
+                    <iconify-icon icon="ic:round-less-than" noobserver class="text-white text-[2em]"></iconify-icon>
+                </button>
                 <button @click="slideNext">
                     <iconify-icon icon="ic:round-greater-than" noobserver class="text-white text-[2em]"></iconify-icon>
                 </button>
