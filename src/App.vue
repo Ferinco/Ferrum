@@ -1,7 +1,7 @@
 <template>
   <main id="app">
-    <Preloader v-if="status" />
-    <div v-else class="flex flex-col relative w-screen items-center">
+    <!-- <Preloader v-if="status" /> -->
+    <div  class="flex flex-col relative w-screen items-center">
       <div class="w-full relative flex flex-col app">
  
           <router-view></router-view>
