@@ -6,7 +6,10 @@
                 <div class="w-[83%] h-[83%] mt-[1px] rounded-full" :class="getClassName(index)">
                 </div>
             </div>
-            {{ active }}
+            <h1 id="h1">
+                {{ scrollY }}
+
+            </h1>
         </div>
     </div>
 </template>
@@ -21,21 +24,25 @@ export default {
         function updateScrolledHeight() {
             const scrollY = window.scrollY;
             // Set thresholds for active dot based on scroll position
-            if (scrollY <= 450) {
+            if (scrollY <= 630) {
                 active.value = 0;
-            } else if (scrollY <= 580) {
+            } else if (scrollY > 630 && scrollY < 4480) {
                 active.value = 1;
-            } else if (scrollY <= 4400) {
+            }else if (scrollY > 4480 && scrollY < 5360) {
                 active.value = 2;
-            } else if (scrollY <= 5280) {
+            } else if (scrollY >= 5360) {
                 active.value = 3;
             }
+            document.getElementById("h1").innerText = scrollY
+        console.log(scrollY)
+
         }
 
         onMounted(() => {
             window.addEventListener('scroll', updateScrolledHeight);
-            updateScrolledHeight(); // Initialize the active dot based on current scroll position
+            updateScrolledHeight(); 
         });
+        console.log(scrollY)
 
         // onUnmounted(() => {
         //     window.removeEventListener('scroll', updateScrolledHeight);
@@ -51,6 +58,7 @@ export default {
         return {
             active,
             getClassName,
+            scrollY
         };
     },
 };
