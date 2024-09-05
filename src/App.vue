@@ -6,7 +6,7 @@
  
           <router-view></router-view>
  
-        <Monitor />
+        <!-- <Monitor /> -->
       </div>
       <Navbar />
     </div>

@@ -70,3 +70,6 @@ overflow-x: hidden;
   /* -webkit-text-stroke: 1px #109648 !important; */
   color: transparent !important;
 }
+::-webkit-scrollbar {
+  display: none;
+}
