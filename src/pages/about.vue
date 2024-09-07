@@ -28,9 +28,12 @@
         </div>
         <div class="w-full md:w-1/2 md:h-auto h-96 md:py-36 px-8 md:px-0 md:pr-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div class="h-[250px] w-full sm:w-[300px]" v-for="(card, index) in cards" :key="index"
+                <div class="h-fit w-full sm:w-[300px] p-5 flex flex-col text-white gap-3 rounded-2xl card" v-for="(card, index) in cards" :key="index"
                     :class="getClassName(index)">
+                    <iconify-icon :icon="card.icon" noobserver class="text-white text-[2em]"></iconify-icon>
 
+<div class="text-2xl font-medium">{{ card.name }}</div>
+<div>{{ card.about }}</div>
                 </div>
             </div>
         </div>
@@ -83,10 +86,29 @@ export default {
             { icon: "", title: "Delivery", about: "make iuns shgdshd gsdshjb" }
         ];
         const cards = [
-            { name: "Experience", about: "500" },
-            { name: "Experience", about: "500" },
-            { name: "Experience", about: "500" },
-            { name: "Experience", about: "500" }
+
+            {
+                icon: "carbon:trophy" ,
+                name: "Experience",
+                about: "With years of industry experience, our team has successfully delivered innovative solutions for diverse clients, ensuring quality and reliability in every project."
+            },
+            {
+                icon: "iconamoon:heart-light",
+                name: "Team",
+                about: "Our dedicated team of experts collaborates seamlessly to turn your vision into reality, bringing together diverse skills and knowledge to achieve exceptional results."
+            },
+            {
+                icon: "system-uicons:lightbulb",
+                name: "Innovative",
+                about: "We pride ourselves on staying ahead of the curve with cutting-edge technology and creative approaches, delivering solutions that drive progress and set new industry standards."
+            },
+            {
+                icon: "fluent:wallet-credit-card-20-regular" ,
+                name: "Affordable",
+                about: "We offer high-quality services at competitive rates, providing you with excellent value for your investment without compromising on quality."
+            }
+
+
         ];
         return {
             serviceCards,
@@ -109,3 +131,10 @@ export default {
 
 
 </script>
+
+<style>
+.card{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+</style>
+

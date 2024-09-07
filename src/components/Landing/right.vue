@@ -7,19 +7,21 @@
             <p class="text-xl font-semibold">Octodos</p>
         </div>
         <div class="flex flex-col my-28 gap-7">
-            <h1 class="text-5xl lg:text-6xl font-bold lg:font-extrabold">
+            <h1 class="text-5xl lg:text-6xl font-bold lg:font-extrabold" data-aos="fade-in" data-aos-easing="ease-in-sine">
                 <span
-                    class="bg-gradient-to-tl from-emerald-700 via-green-500 to-cyan-500 text-transparent bg-clip-text font-medium">#</span>1
-                Place to Build your Dreams with a touch Artistry. 
+                    class="bg-gradient-to-tl from-emerald-700 via-green-500 to-cyan-500 text-transparent bg-clip-text font-medium" data-aos="zoom-in" data-aos-delay="200">#</span>1
+                Place to Build your Dreams with a touch Artistry.
             </h1>
-            <p class="text-xl xl:w-4/5">
+            <p class="text-xl xl:w-4/5" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
                 A Nigerian agency offering complete digital solutions for all your web and
                 mobile development needs.
             </p>
             <div class="flex">
 
                 <Button :title="buttonName" />
-                <lottie-player src="https://lottie.host/ab8cb4f1-aa52-4a0b-aeb7-8d8fc43dda2d/DsU6l0o1dg.json" background="##ffffff" speed="1" style="width: 70px; height: 70px; margin-top: -40px; color:#18A999" loop autoplay direction="1" mode="normal"></lottie-player>
+                <lottie-player src="https://lottie.host/ab8cb4f1-aa52-4a0b-aeb7-8d8fc43dda2d/DsU6l0o1dg.json"
+                    background="##ffffff" speed="1" style="width: 70px; height: 70px; margin-top: -40px; color:#18A999"
+                    loop autoplay direction="1" mode="normal"></lottie-player>
             </div>
         </div>
     </div>
@@ -28,7 +30,8 @@
 <script>
 import { ref } from "vue";
 import Button from "../custom/Button.vue";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default {
     name: "Right",
     components: {
@@ -40,5 +43,14 @@ export default {
             buttonName,
         };
     },
+    mounted() {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    },
+    updated() {
+        AOS.refresh();
+    }
 };
 </script>

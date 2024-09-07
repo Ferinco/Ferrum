@@ -1,5 +1,5 @@
 <template>
-    <nav class="fixed hidden md:flex items-center gap-8 py-3 px-4 mt-5 border border-black/35 rounded-full bg-white z-50">
+    <nav class="fixed hidden md:flex items-center gap-8 py-3 px-4 mt-5 border border-black/35 rounded-full bg-white z-50" data-aos="fade-down" data-aos-delay="300">
       <div class="w-10 h-10 text-sm">
         <img src="/public/favicon.png" />
       </div>
@@ -22,7 +22,10 @@
   </template>
   
   <script>
-  import { ref } from 'vue';
+  import  AOS  from 'aos';
+  import 'aos/dist/aos.css';
+
+import { ref } from 'vue';
   import { RouterLink } from 'vue-router';
   
   export default {
@@ -49,6 +52,15 @@
         handleNavbar,
       };
     },
+    mounted() {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    },
+    updated() {
+        AOS.refresh();
+    }
   };
   </script>
   
