@@ -5,7 +5,7 @@
                 <p class="text-xl font-semibold">Why Choose Us?</p>
             </div>
             <div class="flex flex-col gap-5">
-                <h1 class="text-5xl font-bold lg:font-extrabold">
+                <h1 class="text-5xl font-medium lg:font-extrabold">
                     We know how to merge Innovation with Excellence.
                 </h1>
                 <p class="text-xl xl:w-4/5">
@@ -13,9 +13,11 @@
                     a highly skilled team dedicated to your success.
                 </p>
                 <div class="flex flex-col gap-4">
-                    <div class="flex gap-3" v-for="intro in intros">
-                        <div class="h-9 w-8 border border-red-600">
-
+                    <div class="flex gap-3" v-for="(intro, index) in intros" :key="index">
+                        <div class="h-9 w-9 overflow-hidden">
+                            <lottie-player :src="intro.icon" background="##ffffff" speed="1"
+                                style="" loop autoplay direction="1"
+                                mode="normal" :class="getSize(index)"></lottie-player>
                         </div>
                         <div class="flex flex-col leading-5">
                             <p class="font-semibold">{{ intro.title }}</p>
@@ -28,12 +30,12 @@
         </div>
         <div class="w-full md:w-1/2 md:h-auto h-96 md:py-36 px-8 md:px-0 md:pr-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div class="h-fit w-full sm:w-[300px] p-5 flex flex-col text-white gap-3 rounded-2xl card" v-for="(card, index) in cards" :key="index"
-                    :class="getClassName(index)">
+                <div class="h-fit w-full sm:w-[300px] p-5 flex flex-col text-white gap-3 rounded-2xl card"
+                    v-for="(card, index) in cards" :key="index" :class="getClassName(index)">
                     <iconify-icon :icon="card.icon" noobserver class="text-white text-[2em]"></iconify-icon>
 
-<div class="text-2xl font-medium">{{ card.name }}</div>
-<div>{{ card.about }}</div>
+                    <div class="text-2xl font-medium">{{ card.name }}</div>
+                    <div>{{ card.about }}</div>
                 </div>
             </div>
         </div>
@@ -81,14 +83,14 @@ export default {
 
         );
         const intros = [
-            { icon: "", title: "Analysis", about: "make iuns shgdshd gsdshjb" },
-            { icon: "", title: "Development", about: "make iuns shgdshd gsdshjb" },
-            { icon: "", title: "Delivery", about: "make iuns shgdshd gsdshjb" }
+            { icon: "https://lottie.host/bf636159-831e-4f76-87c3-ecce17032bce/RBUZdsQeYZ.json", title: "Analysis", about: "make iuns shgdshd gsdshjb" },
+            { icon: "https://lottie.host/9b665d6c-a353-400d-9c44-5ee3b7f933f0/Sz4ThZc7YT.json", title: "Development", about: "make iuns shgdshd gsdshjb" },
+            { icon: "https://lottie.host/264b0966-3794-41e1-9126-3c3ff85fe539/xVjwQapcy2.json", title: "Delivery", about: "make iuns shgdshd gsdshjb" }
         ];
         const cards = [
 
             {
-                icon: "carbon:trophy" ,
+                icon: "carbon:trophy",
                 name: "Experience",
                 about: "With years of industry experience, our team has successfully delivered innovative solutions for diverse clients, ensuring quality and reliability in every project."
             },
@@ -103,7 +105,7 @@ export default {
                 about: "We pride ourselves on staying ahead of the curve with cutting-edge technology and creative approaches, delivering solutions that drive progress and set new industry standards."
             },
             {
-                icon: "fluent:wallet-credit-card-20-regular" ,
+                icon: "fluent:wallet-credit-card-20-regular",
                 name: "Affordable",
                 about: "We offer high-quality services at competitive rates, providing you with excellent value for your investment without compromising on quality."
             }
@@ -125,6 +127,14 @@ export default {
                 'bg-yellow-500 mt-10 sm:mt-0 rotate-6 sm:rotate-0': id === 2,
                 'bg-red-500 -rotate-6 sm:rotate-6 mt-10': id === 3,
             };
+        },
+        getSize(id) {
+            return {
+                'w-12 h-12 -ml-1 -mt-2': id === 0,
+                'h-full w-full': id === 1,
+                'h-20 w-20 -ml-6 -mt-6': id === 2,
+              
+            };
         }
     }
 }
@@ -133,8 +143,7 @@ export default {
 </script>
 
 <style>
-.card{
+.card {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    }
+}
 </style>
-

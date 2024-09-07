@@ -21,7 +21,9 @@
                 <div class="flex flex-col lg:absolute gap-4 lg:gap-0 right-0 lg:pr-20 mt-24 lg-mt-0">
                     <div class="p-5 rounded-lg h-fit border w-fit flex items-center gap-5 cursor-pointer duration-100 hover:z-10 hover:rotate-0 z-30"
                         v-for="social in socials" :class="getClassName(social.id)">
-                        <div class="h-9 border w-9"></div>
+                        <div class="h-9 w-9">
+                            <iconify-icon :icon="social.icon" noobserver class="text-white text-[2em]"></iconify-icon>
+                        </div>
                         <div class="text-white text-2xl">
                             <h3>{{ social.about }}</h3>
                         </div>
@@ -66,22 +68,22 @@ export default {
         const socials = ref([
             {
                 id: 0,
-                icon: "fluent:laptop-20-filled",
+                icon: "mdi-light:email",
                 about: "Reach out to us via Email"
             },
             {
                 id: 1,
-                icon: "fluent:phone-20-filled",
+                icon: "hugeicons:whatsapp",
                 about: "Message us on WhatsApp"
             },
             {
                 id: 2,
-                icon: "clarity:email-solid",
+                icon: "ph:linkedin-logo-thin",
                 about: "Connect with us on LinkedIn"
             },
             {
                 id: 3,
-                icon: "mdi:bricks",
+                icon: "pajamas:twitter",
                 about: "Follow our X/Twitter page."
             }
         ]

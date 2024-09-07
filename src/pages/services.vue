@@ -21,7 +21,7 @@
 
             <div class="grid grid-cols-2 gap-5 w-3/4">
                 <div v-for="(item, index) in list" :key="index" class="flex flex-col gap-1">
-                    <p class="text-2xl font-medium text-white underline">{{ item.title }}</p>
+                    <p class="text-2xl font-medium text-white">{{ item.title }}</p>
                     <p class="text-white">{{ item.description }}</p>
                 </div>
             </div>
