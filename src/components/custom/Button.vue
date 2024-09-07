@@ -1,6 +1,6 @@
 <template>
     <button
-        class="btn btn-three text-white font-semibold rounded-md bg-green-600 w-fit px-5 py-3 lg:py-3 z-40 cursor-pointer hover:bg-green-700 after:rounded-md">
+        class="btn btn-three text-white font-semibold rounded-md bg-green-600 w-fit px-5 py-3 lg:py-3 z-40 cursor-pointer hover:bg-green-700 after:rounded-md h-fit">
         <span>
             {{ title || "no propsyet" }}
         </span>

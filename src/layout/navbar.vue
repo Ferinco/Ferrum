@@ -33,8 +33,8 @@
         { id: 0, name: 'Why Octodos?', url: '/about' },
         { id: 1, name: 'Our Services', url: '/services' },
         { id: 2, name: 'Work', url: '/about' },
-        { id: 3, name: 'Clients', url: '/about' },
-        { id: 4, name: 'Contact', url: '/about' },
+        { id: 3, name: 'Clients', url: '/clients' },
+        { id: 4, name: 'Contact', url: '/contact' },
       ]
   
       function handleNavbar() {

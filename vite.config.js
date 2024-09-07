@@ -13,12 +13,15 @@ export default defineConfig({
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => tag === 'iconify-icon',
+      isCustomElement: (tag) => tag === 'lottie-player',
     },
+    
   },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
       
     }
+    
   }
 })

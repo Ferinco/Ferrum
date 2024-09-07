@@ -9,8 +9,8 @@
                     We know how to merge Innovation with Excellence.
                 </h1>
                 <p class="text-xl xl:w-4/5">
-                    Choosing Octodos is an ultimate good choice to ensuring that your ideas are birth with the best
-                    possible resources by the best team possible.
+                    Choosing Octodos is the optimal choice to bring your ideas to life, utilizing the best resources and
+                    a highly skilled team dedicated to your success.
                 </p>
                 <div class="flex flex-col gap-4">
                     <div class="flex gap-3" v-for="intro in intros">

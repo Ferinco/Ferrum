@@ -8,3 +8,4 @@ import gsap from 'gsap';
 gsap.registerPlugin(ScrollTrigger);
 createApp(App).use(router).mount('#app');
 
+
