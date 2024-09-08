@@ -17,6 +17,21 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition; 
+    }else {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth', 
+          });
+          resolve({ top: 0 });
+        }, );
+      });
+    }
+  },
 })
 
 export default router;

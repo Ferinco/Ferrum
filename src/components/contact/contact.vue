@@ -1,5 +1,5 @@
 <template>
-    <div class="h-fit flex md:flex-row flex-col justify-center relative">
+    <div class="h-fit flex lg:flex-row flex-col justify-center relative">
         <ContactLeft/>
         <ContactRight/>
 

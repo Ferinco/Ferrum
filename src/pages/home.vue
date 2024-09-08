@@ -12,7 +12,7 @@
 <script>
 import Contact from '@/components/contact/contact.vue';
 import Monitor from '@/components/custom/monitor.vue';
-import Landing from '@/components/Landing/landing.vue';
+import Landing from '@/components/landing.vue';
 import Services from '@/components/servies/Services.vue';
 import Steps from '@/components/Steps.vue';
 
