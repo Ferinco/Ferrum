@@ -7,13 +7,13 @@
                 </div>
                 <p class="text-xl font-semibold">Octodos</p>
             </div>
-            <div class="flex flex-col mt-28 lg:my-28 gap-7">
+            <div class="flex flex-col mt-20 lg:my-28 gap-7">
                 <h1 class="text-5xl lg:text-6xl font-bold lg:font-extrabold" data-aos="fade-in" data-aos-easing="ease-in-sine">
                     <span
                         class="bg-gradient-to-tl from-emerald-700 via-green-500 to-cyan-500 text-transparent bg-clip-text font-medium" data-aos="zoom-in" data-aos-delay="200">#</span>1
                     Place to Build your Dreams with a touch Artistry.
                 </h1>
-                <p class="text-2xl xl:w-4/5 lg:w-full sm:w-4/5" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
+                <p class="text-xl xl:w-4/5 lg:w-full sm:w-4/5" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     A Nigerian agency offering complete digital solutions for all your web and
                     mobile development needs.
                 </p>

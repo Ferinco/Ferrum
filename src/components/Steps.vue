@@ -1,8 +1,8 @@
 <template>
-    <div class="w-full relative md:bg-gradient-to-r from-white from-50% to-green-500 to-50%">
+    <div class="w-full relative  lg:bg-gradient-to-r from-white from-50% to-green-500 to-50%">
         <div class="px-8 sm:px-20 h-full flex flex-col w-screen overflow-x-hidden gap-8" ref="section">
-            <div class="my-32 h-full flex flex-col gap-10">
-                <h2 class="text-5xl font-bold max-w-[350px]">
+            <div class="my-16 md:my-32 h-full flex flex-col gap-10">
+                <h2 class="text-4xl lg:text-5xl font-bold max-w-[350px]">
                     How we do what we do.
                 </h2>
 
