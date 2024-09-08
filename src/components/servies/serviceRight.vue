@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full lg:w-1/2 h-auto bg-green-500 flex flex-col justify-center ">
+    <div class="w-full lg:w-1/2 h-auto bg-green-700 flex flex-col justify-center ">
         <div class="my-14 md:my-32 px-8 md:px-20">
             <swiper-container ref="swiperEl" slides-per-view="1" speed="500" loop="false" css-mode="true">
                 <swiper-slide v-for="(slide, index) in slides" :key="index" class="h-80">

@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full relative lg:bg-gradient-to-r from-white from-50% to-green-500 to-50%">
+    <div class="w-full relative lg:bg-gradient-to-r from-white from-50% to-green-700 to-50%">
         <div class="h-full flex flex-col w-screen overflow-x-hidden gap-8" ref="section">
             <div class="my-16 md:my-28 h-full flex flex-col gap-10">
                 <h2 class="px-8 sm:px-20 text-4xl lg:text-5xl font-semibold lg:font-bold lg:w-3/6 leading-tight">
