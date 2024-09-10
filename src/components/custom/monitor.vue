@@ -19,21 +19,21 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 export default {
     name: "Monitor",
-    setup() {
+    data() {
         const active = ref(0);
         function updateScrolledHeight() {
             const scrollY = window.scrollY;
             // Set thresholds for active dot based on scroll position
             if (scrollY <= 630) {
                 active.value = 0;
-            } else if (scrollY > 630 && scrollY < 4480) {
+            } else if (scrollY > 630 && scrollY < 1260) {
                 active.value = 1;
-            }else if (scrollY > 4480 && scrollY < 5360) {
+            }else if (scrollY > 1260 && scrollY < 1890) {
                 active.value = 2;
-            } else if (scrollY >= 5360) {
+            } else if (scrollY >= 1890) {
                 active.value = 3;
             }
-        //     document.getElementById("h1").innerText = scrollY
+            // document.getElementById("h1").innerText = scrollY
         // console.log(scrollY)
 
         }
@@ -42,7 +42,6 @@ export default {
             window.addEventListener('scroll', updateScrolledHeight);
             updateScrolledHeight(); 
         });
-        console.log(scrollY)
 
         // onUnmounted(() => {
         //     window.removeEventListener('scroll', updateScrolledHeight);
