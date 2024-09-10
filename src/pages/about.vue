@@ -1,11 +1,11 @@
 <template>
-    <div class="flex flex-col md:flex-row h-fit">
-        <div class="w-full md:w-1/2 h-full px-8 sm:px-20 flex flex-col my-28 gap-7">
+    <div class="flex flex-col lg:flex-row h-fit">
+        <div class="w-full lg:w-1/2 h-full px-8 sm:px-20 flex flex-col my-28 gap-7" data-aos="fade-right">
             <div class="flex gap-1 items-center mt-8">
                 <p class="text-xl font-semibold">Why Choose Us?</p>
             </div>
             <div class="flex flex-col gap-5">
-                <h1 class="text-5xl font-medium lg:font-extrabold">
+                <h1 class="xl:text-5xl text-4xl font-semibold lg:font-bold">
                     We know how to merge Innovation with Excellence.
                 </h1>
                 <p class="text-xl xl:w-4/5">
@@ -15,9 +15,8 @@
                 <div class="flex flex-col gap-4">
                     <div class="flex gap-3" v-for="(intro, index) in intros" :key="index">
                         <div class="h-9 w-9 overflow-hidden">
-                            <lottie-player :src="intro.icon" background="##ffffff" speed="1"
-                                style="" loop autoplay direction="1"
-                                mode="normal" :class="getSize(index)"></lottie-player>
+                            <lottie-player :src="intro.icon" background="##ffffff" speed="1" style="" loop autoplay
+                                direction="1" mode="normal" :class="getSize(index)"></lottie-player>
                         </div>
                         <div class="flex flex-col leading-5">
                             <p class="font-semibold">{{ intro.title }}</p>
@@ -28,9 +27,9 @@
                 <Button :title="buttonName" class="mt-5" />
             </div>
         </div>
-        <div class="w-full md:w-1/2 md:h-auto h-96 md:py-36 px-8 md:px-0 md:pr-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div class="h-fit w-full sm:w-[300px] p-5 flex flex-col text-white gap-3 rounded-2xl card"
+        <div class="w-full lg:w-1/2 md:h-auto lg:py-36 px-8 lg:px-0 lg:pr-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5" data-aos="fade-left">
+                <div class="h-fit w-full sm:w-[300px] md:w-[400px] lg:w-[300px] p-5 flex flex-col text-white gap-3 rounded-2xl card"
                     v-for="(card, index) in cards" :key="index" :class="getClassName(index)">
                     <iconify-icon :icon="card.icon" noobserver class="text-white text-[2em]"></iconify-icon>
 
@@ -46,7 +45,8 @@
 <script>
 import Button from '@/components/custom/Button.vue';
 import { ref } from 'vue';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default {
     name: "About",
     components: {
@@ -133,8 +133,13 @@ export default {
                 'w-12 h-12 -ml-1 -mt-2': id === 0,
                 'h-full w-full': id === 1,
                 'h-20 w-20 -ml-6 -mt-6': id === 2,
-              
+
             };
+        },
+        setDelay(id) {
+            return id * 100;
+
+
         }
     }
 }

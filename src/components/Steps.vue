@@ -2,11 +2,11 @@
     <div class="w-full relative lg:bg-gradient-to-r from-white from-50% to-green-700 to-50%">
         <div class="h-full flex flex-col w-screen overflow-x-hidden gap-8" ref="section">
             <div class="my-16 md:my-28 h-full flex flex-col gap-10">
-                <h2 class="px-8 sm:px-20 text-4xl lg:text-5xl font-semibold lg:font-bold lg:w-3/6 leading-tight">
+                <h2 class="px-8 sm:px-20 text-4xl lg:text-5xl font-semibold lg:font-bold lg:w-3/6 leading-tight" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     Why we are different from other agencies.
                 </h2>
                 <div class="flex flex-col lg:flex-row justify-between lg:gap-0 gap-12 mt-10">
-                    <div class="px-8 sm:px-20 flex flex-col gap-5 lg:w-1/2">
+                    <div class="px-8 sm:px-20 flex flex-col gap-5 lg:w-1/2" data-aos="fade-right">
                         <h2 class="font-semibold text-2xl flex  items-center gap-1">Octodos Agency: <iconify-icon
                             icon="mdi:person-outline" noobserver class="text-red-500 text-[1.1em]"></iconify-icon>
                         </h2>
@@ -24,7 +24,7 @@
                         </div>
                     </div>
 
-                    <div class="px-8 sm:px-20 flex flex-col gap-5 lg:w-1/2 lg:text-white">
+                    <div class="px-8 sm:px-20 flex flex-col gap-5 lg:w-1/2 lg:text-white" data-aos="fade-left">
                         <h2 class="font-semibold text-2xl flex  items-center gap-1">Most Agencies: <iconify-icon
                                 icon="fe:disabled" noobserver class="text-red-500 text-[1em]"></iconify-icon>
                         </h2>
@@ -68,6 +68,8 @@ import { ref } from 'vue';
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 import Button from './custom/Button.vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 gsap.registerPlugin(ScrollTrigger)
 
 export default {
@@ -137,6 +139,15 @@ export default {
     //         };
     //     }
     // }
+    mounted() {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    },
+    updated() {
+        AOS.refresh();
+    }
 
 }
 </script>

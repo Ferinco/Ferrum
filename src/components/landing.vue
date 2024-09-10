@@ -7,7 +7,7 @@
                 </div>
                 <p class="text-md lg:text-xl font-semibold">Octodos</p>
             </div>
-            <div class="flex flex-col my-16 lg:my-28 gap-7">
+            <div class="flex flex-col my-16 md:mt-24 lg:my-28 gap-7">
                 <h1 class="text-5xl lg:text-6xl font-bold lg:font-extrabold" data-aos="fade-in" data-aos-easing="ease-in-sine">
                     <span
                         class="bg-gradient-to-tl from-emerald-700 via-green-500 to-cyan-500 text-transparent bg-clip-text font-medium" data-aos="zoom-in" data-aos-delay="200">#</span>1
@@ -17,11 +17,11 @@
                     A Nigerian agency offering complete digital solutions for all your web and
                     mobile development needs.
                 </p>
-                <div class="flex">
+                <div class="flex" >
                     <Button :title="buttonName" />
                     <lottie-player src="https://lottie.host/ab8cb4f1-aa52-4a0b-aeb7-8d8fc43dda2d/DsU6l0o1dg.json"
                         background="##ffffff" speed="1" style="width: 70px; height: 70px; margin-top: -40px; color:#18A999"
-                        loop autoplay direction="1" mode="normal" class="lg:block hidden"></lottie-player>
+                        loop autoplay direction="1" mode="normal" class="xl:block hidden"></lottie-player>
                 </div>
             </div>
         </div>

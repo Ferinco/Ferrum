@@ -3,7 +3,7 @@
         <h2 class="text-4xl lg:text-5xl font-bold" data-aos="fade-in" data-aos-easing="ease-in-sine">
             With us, Everything is Made Easy!
         </h2>
-        <p class="text-xl my-4 lg:w-5/6">We provide vast services of custom development.</p>
+        <p class="text-xl my-4 lg:w-5/6" data-aos="fade-in" data-aos-easing="ease-in-sine">We provide vast services of custom development.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
             <div v-for="serviceCard in serviceCards" :key="serviceCard.id" class="service-card my-2" data-aos="fade-in" data-aos-easing="ease-in-sine" :data-aos-delay="getDelay(serviceCard.id)">
                 <div class="w-12 h-12 my-4 icon-div flex justify-center items-center border border-black"

@@ -1,7 +1,6 @@
 <template>
-    <div class="w-full lg:w-1/2 relative h-auto bg-teal-700 flex flex-col px-8 sm:px-20 items-center justify-center gap-5 py-5">
-        <div class="my-32 flex flex-col gap-3" data-aos="fade-left">
-            <div class="p-5 rounded-lg h-fit border w-fit flex items-center gap-5 cursor-pointer duration-100 hover:z-10 hover:rotate-0 z-30" v-for="social in socials" :class="getClassName(social.id)">
+        <div class="flex flex-col" data-aos="fade-left">
+            <div class="p-5 rounded-lg h-fit border w-fit flex items-center gap-5 cursor-pointer duration-100 hover:z-10 hover:rotate-0 z-30 my-1" v-for="social in socials" :class="getClassName(social.id)">
             <div class="h-9 w-9">
                 <iconify-icon :icon="social.icon" noobserver class="text-white text-[2em]"></iconify-icon>
 
@@ -11,8 +10,6 @@
             </div>
             </div>
         </div>
-    </div>
-
 </template>
 
 
@@ -22,7 +19,7 @@ import  AOS  from 'aos';
 import 'aos/dist/aos.css';
 
 export default {
-    name: "ContactRight",
+    name: "Socials",
     setup() {
         const socials = ref([
             {
