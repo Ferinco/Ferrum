@@ -11,7 +11,7 @@
       Hire us
     </RouterLink>
   </nav>
-  <div class="mobile-navbar md:hidden fixed w-full flex flex-col h-screen" :class="navOpen ? `bg-white transition-all duration-100` : `transition-all duration-100 bg-transparent`">
+  <div class="mobile-navbar z-50 md:hidden fixed w-full flex flex-col h-screen" :class="navOpen ? `bg-white transition-all duration-100` : `transition-all duration-100 bg-transparent`">
     <div class="flex flex-row items-baseline justify-between h-fit p-3 bg-white">
       <div class="flex gap-1 items-center mt-8 ">
         <div class="h-8 w-8 lg:w-10 lg:h-10 flex-shrink-0">

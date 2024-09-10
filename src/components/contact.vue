@@ -20,7 +20,7 @@
 
                 </div>
             </div>
-            <div class="px-7 sm:px-20 lg:my-32 my-12 lg:w-1/2 w-full flex justify-center items-center absolute right-0">
+            <div class="px-7 sm:px-20 lg:my-32 my-12 lg:w-1/2 w-full flex justify-center items-center lg:absolute right-0">
                 <Socials/>
             </div>
         </div>
