@@ -41,7 +41,6 @@ export default {
                 swiperEl.value.swiper.slideNext();
             }
         };
-
         onMounted(() => {
             if (swiperEl.value) {
                 swiperEl.value.swiper = new Swiper(swiperEl.value, {

@@ -2,13 +2,14 @@
     <div class="w-full relative lg:bg-gradient-to-r from-white from-50% to-green-700 to-50%">
         <div class="h-full flex flex-col w-screen overflow-x-hidden gap-8" ref="section">
             <div class="my-16 md:my-28 h-full flex flex-col gap-10">
-                <h2 class="px-8 sm:px-20 text-4xl lg:text-5xl font-semibold lg:font-bold lg:w-3/6 leading-tight" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
+                <h2 class="px-8 sm:px-20 text-4xl lg:text-5xl font-semibold lg:font-bold lg:w-3/6 leading-tight"
+                    data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     Why we are different from other agencies.
                 </h2>
                 <div class="flex flex-col lg:flex-row justify-between lg:gap-0 gap-12 mt-10">
                     <div class="px-8 sm:px-20 flex flex-col gap-5 lg:w-1/2" data-aos="fade-right">
                         <h2 class="font-semibold text-2xl flex  items-center gap-1">Octodos Agency: <iconify-icon
-                            icon="mdi:person-outline" noobserver class="text-red-500 text-[1.1em]"></iconify-icon>
+                                icon="mdi:person-outline" noobserver class="text-red-500 text-[1.1em]"></iconify-icon>
                         </h2>
                         <div class="flex flex-col gap-4">
                             <div v-for="(item, index) in good" :key="index" class="flex gap-3 items-center">
@@ -29,7 +30,7 @@
                                 icon="fe:disabled" noobserver class="text-red-500 text-[1em]"></iconify-icon>
                         </h2>
                         <div class="flex flex-col gap-4">
-                            <div v-for="(item, index) in good" :key="index" class="flex gap-3 items-center">
+                            <div v-for="(item, index) in bad" :key="index" class="flex gap-3 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30"
                                     fill="none">
                                     <g clip-path="url(#clip0_38_272)">
@@ -77,21 +78,6 @@ export default {
     components: {
         Button,
     },
-    // mounted() {
-    //     this.cardsRef = this.$refs.card
-    //     gsap.to(this.cardsRef, {
-    //         xPercent: -100 * (this.cardsRef.length - 1),
-    //         ease: 'none',
-    //         scrollTrigger: {
-    //             trigger: this.$refs.section,
-    //             pin: true,
-    //             scrub: 1,
-    //             end: '+=3000'
-    //         }
-    //     })
-
-
-    // },
     data() {
         const buttonName = ref('Hire Us Now!');
         return {
@@ -102,43 +88,36 @@ export default {
                     description: 'Discuss your project needs with our experts to craft a tailored solution that meets your goals.'
                 },
                 {
-                    description: 'We bring creative and cutting-edge ideas to transform your vision into a unique digital experience.'
+                    description: 'We bring innovative ideas to life, transforming your vision into a distinctive digital experience.'
                 },
                 {
-                    description: 'Our developers turn concepts into reality, ensuring robust and scalable websites or applications.'
+                    description: 'Our developers turn concepts into functional, scalable websites or applications built for growth.'
                 },
                 {
-                    description: 'We deliver a polished final product, ensuring your project is launched on time and to specification.'
+                    description: 'We deliver a polished final product, ensuring on-time launch and top-quality execution.'
                 },
+
             ],
             bad: [
                 {
-                    description: 'Discuss your project needs with our experts to craft a tailored solution that meets your goals.'
+                    description: 'They provide generic solutions without fully understanding your project needs or goals.'
                 },
                 {
-                    description: 'We bring creative and cutting-edge ideas to transform your vision into a unique digital experience.'
+                    description: 'They offer uninspired ideas that fail to transform your vision into a standout digital experience.'
                 },
                 {
-                    description: 'Our developers turn concepts into reality, ensuring robust and scalable websites or applications.'
+                    description: 'Their developers struggle to turn concepts into scalable, functional websites or applications, leading to limitations.'
                 },
                 {
-                    description: 'We deliver a polished final product, ensuring your project is launched on time and to specification.'
+                    description: 'They deliver incomplete or subpar products, often missing deadlines and compromising on quality.'
                 },
-            ]
+            ],
+
 
 
         }
     },
-    // methods: {
-    //     getClassName(id) {
-    //         return {
-    //             'text-blue-300': id === 0,
-    //             'text-green-300': id === 3,
-    //             'text-yellow-300': id === 2,
-    //             'text-red-300': id === 1,
-    //         };
-    //     }
-    // }
+
     mounted() {
         AOS.init({
             duration: 1000,

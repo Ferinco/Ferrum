@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:bg-gradient-to-r from-white from-50% to-[#18A999] to-50%">
+    <div class="lg:bg-gradient-to-r from-white from-50% to-teal-700 to-50% relative">
         <div class="flex flex-col lg:flex-row justify-between items-center">
             <div
                 class="w-full lg:w-1/2 h-fit flex flex-col gap-3 items-center lg:items-start text-center lg:text-start px-7 sm:px-20 lg:my-32 my-12">
@@ -11,7 +11,7 @@
                     Looking for guidance on your next project or support in bringing it to
                     life? Schedule a free meeting with our expert team, and we'll gladly explore your needs in depth.
                 </p>
-                <div class="lg:mt-10 md:mt-0 flex my-2">
+                <div class="lg:mt-3 md:mt-0 flex my-2">
                     <Button :title="buttonName" /> <lottie-player
                         src="https://lottie.host/ab8cb4f1-aa52-4a0b-aeb7-8d8fc43dda2d/DsU6l0o1dg.json"
                         background="##ffffff" speed="1"
@@ -20,7 +20,7 @@
 
                 </div>
             </div>
-            <div class="px-7 sm:px-20 lg:my-32 my-12 lg:w-1/2 w-full flex justify-center items-center">
+            <div class="px-7 sm:px-20 lg:my-32 my-12 lg:w-1/2 w-full flex justify-center items-center absolute right-0">
                 <Socials/>
             </div>
         </div>
